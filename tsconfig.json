@@ -3,9 +3,7 @@
     "target":  "ES6",
     "module":  "CommonJS",
     "outDir":  "./dist",
-    "rootDir": "./src",
-    "removeComments": true,
-    "noEmitOnError":  true
+    "rootDir": "./src"
   },
   "exclude": [
     "node_modules"
