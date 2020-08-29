@@ -1,0 +1,43 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint/eslint-plugin",
+    "lodash",
+    "no-loops",
+    "no-use-extend-native",
+    "node",
+    "optimize-regex",
+    "promise",
+    "sonarjs",
+    "unicorn"
+  ],
+  "extends": [
+    "airbnb-typescript/base",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:lodash/recommended",
+    "plugin:node/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:unicorn/recommended"
+  ],
+  "root": true,
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "@typescript-eslint/brace-style": ["error", "stroustrup"],
+    "key-spacing": ["error", { "align": "value" }],
+    "no-console": "off",
+    "no-multi-spaces": "off",
+    "max-len": ["error", { "code": 120, "comments": 240, "tabWidth": 2 }]
+  }
+}
