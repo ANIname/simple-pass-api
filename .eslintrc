@@ -35,9 +35,17 @@
   },
   "rules": {
     "@typescript-eslint/brace-style": ["error", "stroustrup"],
+    "@typescript-eslint/indent": ["error", "tab"],
     "key-spacing": ["error", { "align": "value" }],
     "no-console": "off",
     "no-multi-spaces": "off",
-    "max-len": ["error", { "code": 120, "comments": 240, "tabWidth": 2 }]
+    "max-len": ["error", { "code": 120, "comments": 240, "tabWidth": 2 }],
+    "node/no-unsupported-features/es-syntax": "off",
+    "no-tabs": ["error", { "allowIndentationTabs": true }],
+    "node/no-missing-import": ["error", {
+      "allowModules": [],
+      "resolvePaths": ["/path/to/a/modules/directory"],
+      "tryExtensions": [".js", ".json", ".ts"]
+    }]
   }
 }
