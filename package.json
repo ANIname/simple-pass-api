@@ -2,7 +2,6 @@
   "name": "simple-pass-api",
   "version": "1.0.0",
   "description": "Api for simple password manager",
-  "private": true,
   "main": "src",
   "scripts": {
     "build": "tsc",
