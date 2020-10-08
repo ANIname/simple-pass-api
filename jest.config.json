@@ -1,5 +1,0 @@
-{
-  "roots": ["<rootDir>/test"],
-  "testMatch": ["**/?(*.)+(ts)"],
-  "transform": { "^.+\\.(ts)$": "ts-jest" }
-}
