@@ -1,0 +1,31 @@
+{
+  "name": "simple-pass-api",
+  "version": "1.0.0",
+  "description": "Api for simple password manager",
+  "scripts": {
+    "deploy": "serverless deploy"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ANIname/simple-pass-api.git",
+    "bugs": "https://github.com/ANIname/simple-pass-api/issues",
+    "info": "https://github.com/ANIname/simple-pass-api#readme"
+  },
+  "keywords": [
+    "api",
+    "simple",
+    "password",
+    "manager"
+  ],
+  "author": "https://github.com/KiiDii",
+  "license": "ISC",
+  "dependencies": {
+    "directory-import": "^1.2.1",
+    "serverless-webpack": "^5.3.5",
+    "webpack": "^4.44.2"
+  },
+  "devDependencies": {}
+}
