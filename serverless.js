@@ -1,11 +1,14 @@
 const importDir   = require('directory-import');
+const forEach			= require('lodash/forEach');
 const packageFile = require('./package');
 
 const functions    = {};
 const stage        = process.env.stage || 'development';
+const ApiDirPath 	 = './api-config';
 const servicesName = `${packageFile.name}-${stage}`
+const apiConfigs	 = importDir(ApiDirPath, 'sync');
 
-importDir('./api-config', 'sync', (name, path, data) => functions[name] = data);
+forEach(apiConfigs, prepareLambdaFunctions)
 
 const config = {
 	functions,
@@ -59,5 +62,16 @@ const config = {
 		},
 	},
 };
+
+function prepareLambdaFunctions(config, path) {
+	const slicerStart = ApiDirPath.length + 1;
+	const slicerEnd 	= path.length - '.js'.length;
+
+	const lambdaFunctionName = path
+		.slice(slicerStart, slicerEnd)
+		.replace('/', '-');
+
+	functions[lambdaFunctionName] = config;
+}
 
 module.exports = config;
